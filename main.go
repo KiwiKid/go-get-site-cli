@@ -56,7 +56,7 @@ func scrapeCmd(cmd *start.Command) error {
 			return err
 		}
 		log.Printf("Scraped %s, saving data", url)
-		err = saveDOMToFile(*folder, domContent, meta, loadTime)
+		err = saveDOMToFile(url, *folder, domContent, meta, loadTime)
 		if err != nil {
 			return err
 		}
